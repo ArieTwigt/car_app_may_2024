@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="mb-3">
+    <div class="card">
+        <div class="card-header">
+          Calculate circle
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Diameter</h5>
+          <p class="card-text">Calculate the size based on the diameter</p>
+
+          <form method="post" action="/circle">
+            <label for="labelCircle" class="form-label">Diameter</label>
+            <input name="diameter" type="number" class="form-control" id="labelCircle" placeholder="Voer de diameter in">
+            <button type="submit" class="btn btn-primary">Bereken</button>
+          </form>
+          <h1><span class="badge text-bg-secondary">{{ diameter }}</span></h1>
+          <h1><span class="badge text-bg-success">{{ circle_size }}</span></h1>
+          
+        </div>
+      </div>
+</div>
+
+
+{% endblock %}
